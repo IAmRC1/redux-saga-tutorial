@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { ToastContainer } from 'react-toastify';
+import { Counter, Post, RecipeImage, Movie, } from './containers'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+    return (
+        <>
+            <ToastContainer />
+            <div className="container">
+                <Counter
+                    increment={10} 
+                    decrement={20}
+                />
+                <hr />
+                <Movie />
+                <hr />
+                <RecipeImage />
+                <hr />
+                <Post />
+            </div>
+            
+        </>
+    );
 }
-
-export default App;
